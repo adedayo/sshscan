@@ -1,7 +1,7 @@
 builds:
-- main: ./cmd/tcpscan/tcpscan.go
+- main: ./cmd/sshscan/sshscan_main.go
   env:
-    - CGO_ENABLED=1
+    - CGO_ENABLED=0
   goos: 
     - darwin
   goarch:
@@ -9,6 +9,9 @@ builds:
 archive:
   replacements:
     darwin: Darwin
+    linux: Linux
+    windows: Windows
+    386: i386
     amd64: x86_64
 checksum:
   name_template: 'checksums.txt'
@@ -24,5 +27,5 @@ brew:
   github:
     owner: adedayo
     name: homebrew-tap
-  homepage: "https://github.com/adedayo/tcpscan"
-  description: "TCPScan is a simple utility for discovering open (or closed) TCP ports on servers. It uses gopacket(https://github.com/google/gopacket) to craft SYN packets, listening asynchronously for (SYN-)ACK or RST responses without completing the full TCP handshake. TCPScan uses goroutines for asynchronous scans and it searches for the most likely listening ports first, using NMap's port frequency ordering. Anecdotal results show that TCPScan is really fast!"
+  homepage: "https://github.com/adedayo/sshscan"
+  description: "SSHScan is a simple utility for inspecting SSH key exchange settings on SSH servers"
