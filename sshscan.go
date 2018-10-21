@@ -28,7 +28,7 @@ type SSHExchange struct {
 	LanguagesC2S       []string //Languages client to server
 	LanguagesS2C       []string //Languages server to client
 	Fail               bool     //if the inspection fails
-	FailReason         string   //possible error information in the event of a failure
+	FailReason         string   //error information in the event of a failure
 
 }
 
