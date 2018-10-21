@@ -50,7 +50,6 @@ brew install sshscan
 sshscan host
 
 #specify port explicitly
-
 sshscan -p 22222 host
 ```
 
